@@ -30,6 +30,13 @@ class TodoTest < Test::Unit::TestCase
 		assert last_response.body.include? ('bar')
 	end
 
+	def test_it_marks_as_completed
+		post '/complete_item', :index => 1, :todo => 'bar', :complete => true
+		get '/'
+		assert last_response.body.include? (true)
+	end
+
+
 
 
 end
