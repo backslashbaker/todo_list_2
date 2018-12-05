@@ -11,11 +11,19 @@ class TodoTest < Test::Unit::TestCase
     Sinatra::Application
 	end
 
-	def test_it_says_hello_world
+	def test_it_shows_welcome_page
     get '/'
     assert last_response.ok?
-    assert_equal 'Hello World!', last_response.body
-  end
+    assert last_response.body.include? ('Welcome to the Todo list app')
+	end
+
+	def test_it_creates_new_item
+		post '/new_item', :todo => 'foo'
+		get '/'
+		assert last_response.ok?
+		assert last_response.body.include? ('foo')
+	end
+	
 
 
 end
