@@ -1,10 +1,15 @@
 	<h1>Edit item</h1>
 	
 	<form method="post" action="/edit_item">
+	<fieldset>
+			<label for="index">Item number:</label>
+			<input type="number" name="index" id="index">
+		</fieldset>
 		<fieldset>
-			<label for="todo">Item:</label>
+			<label for="todo">Change to:</label>
 			<input type="text" name="todo" id="todo">
 		</fieldset>
+		
 		<input type="submit">
 	</form>
 
