@@ -2,11 +2,12 @@
 
 <p>Welcome to the Todo list app</p>
 
+<ol>
 <% TODO.each do |k| %>
 	
-	<p><%= k[:todo] %></p>
+	<li><%= k[:todo] %></li>
 	
 <% end %>
-
+</ol>
 <a href='/new_item'>create a new item</a></p>
-
+<a href='/edit_item'>edit an item</a></p>
