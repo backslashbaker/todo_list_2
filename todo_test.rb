@@ -23,7 +23,13 @@ class TodoTest < Test::Unit::TestCase
 		assert last_response.ok?
 		assert last_response.body.include? ('foo')
 	end
-	
+
+	def test_it_edits_item
+		post '/edit_item', :index => 1, :todo => 'bar'
+		get '/'
+		assert last_response.body.include? ('bar')
+	end
+
 
 
 end
