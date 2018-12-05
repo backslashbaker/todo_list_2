@@ -6,6 +6,8 @@ GEM
     rack (2.0.6)
     rack-protection (2.0.4)
       rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     sinatra (2.0.4)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -18,6 +20,7 @@ PLATFORMS
 
 DEPENDENCIES
   pg
+  rack-test
   sinatra
 
 BUNDLED WITH
